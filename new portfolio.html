@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thisen Nambukara</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   //icouns 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <div class="bganimation">
@@ -14,7 +16,7 @@
         <div class="nav-container">
             <div class="logo">Thisen Nambukara</div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -23,18 +25,29 @@
             </ul>
         </div>
     </nav>
+    <br>
+
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Alex Chen</h1>
-            <p class="hero-subtitle">Backend Engineer & Database Architect</p>
-            <p style="color: var(--text-secondary); margin-bottom: 2rem;">
-                Building scalable systems and robust data architectures that power modern applications
-            </p>
-            <a href="#contact" class="cta-button">Let's Build Something Amazing</a>
+    <section id="hero"  class="hero">
+        
+        <div class="about-content">
+            <div class="about-image"><img src="IT24100843.JPG" alt="About Me Image" class="img-fluid" style="border-radius: 50%" height=300px width="300px" ></div>
+            <div class="about-text">
+                <h1 class="hero-content">Hi, I'm Thisen</h1>
+                <h2 aria-label="Hi! I'm a developer" >Hi! I'm a &nbsp;<span class="typewriter"></span></h2>
+                <p>I'm a Software engineering Undergraduate passionate about web development and software engineering. This site showcases my projects and ideas, blending technical skills with creative design to creat user-friendly experiences.</p>
+                <br>
+                <p>Join me as I explore how technology solves problems and improves lives. Let's build something great together!</p>
+                <br>
+                <a href="#" class="cta-button">Downlode CV</a> 
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-github"></a>
+                <a href="#" class="fa fa-envelope"></a>
+            </div>
         </div>
     </section>
+
 
     <!-- About Section -->
     <section id="about">
@@ -357,5 +370,41 @@
         // Create particles periodically
         setInterval(createParticle, 100);
     </script>
+
+    <script>
+  const typewriter = document.querySelector('.typewriter');
+  const phrases = ["Frontend Developer", "Full Stack Developer"];
+  const typingDelay = 150;  // delay between typing each letter (ms)
+  const erasingDelay = 100; // delay between erasing each letter (ms)
+  const newPhraseDelay = 1500; // delay before typing new phrase (ms)
+  let phraseIndex = 0;
+  let letterIndex = 0;
+
+  function type() {
+    if (letterIndex < phrases[phraseIndex].length) {
+      typewriter.textContent += phrases[phraseIndex].charAt(letterIndex);
+      letterIndex++;
+      setTimeout(type, typingDelay);
+    } else {
+      setTimeout(erase, newPhraseDelay);
+    }
+  }
+
+  function erase() {
+    if (letterIndex > 0) {
+      typewriter.textContent = phrases[phraseIndex].substring(0, letterIndex - 1);
+      letterIndex--;
+      setTimeout(erase, erasingDelay);
+    } else {
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      setTimeout(type, typingDelay);
+    }
+  }
+
+  // Start the typing effect on load
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(type, newPhraseDelay);
+  });
+</script>
 </body>
 </html>

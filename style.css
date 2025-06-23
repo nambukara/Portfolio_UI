@@ -224,6 +224,62 @@
             box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
         }
 
+        /* Base icon style */
+.fa {
+    padding: 20px;
+    font-size: 40px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    transition: color 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect for all icons */
+.fa:hover {
+    color: #0A66C2; /* e.g. LinkedIn blue or highlight */
+}
+
+/* Default (dark mode): white icons */
+.fa-linkedin,
+.fa-github,
+.fa-envelope {
+    background: none;
+    color: white;
+}
+
+/* Light mode: override to black */
+body[data-theme="light"] .fa-linkedin,
+body[data-theme="light"] .fa-envelope,
+body[data-theme="light"] .fa-github {
+    color: black;
+}
+
+
+h2 {
+    
+    color: #8bf;
+    text-align: left;
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+    margin: 1rem 0 1rem 2rem;
+  }
+.typewriter {
+    border-right: 2px solid currentColor;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    /* caret blink animation */
+    animation: blink 0.7s steps(1) infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { border-color: currentColor; }
+    50% { border-color: transparent; }
+  }
+
+
         /* Sections */
         section {
             padding: 5rem 5%;

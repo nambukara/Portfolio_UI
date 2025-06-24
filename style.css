@@ -222,7 +222,7 @@
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
+            box-shadow: 0 15px 40px #00d4ff66;
         }
 
         .cta-container {
@@ -243,12 +243,14 @@
 
 /* Hover effect for all icons */
 .fa:hover {
-    color: #0A66C2; /* e.g. LinkedIn blue or highlight */
+    color: #00d4ff66; /* e.g. LinkedIn blue or highlight */
 }
 
 /* Default (dark mode): white icons */
 .fa-linkedin,
 .fa-github,
+.fa-facebook,
+.fa-instagram,
 .fa-envelope {
     background: none;
     color: white;
@@ -257,6 +259,8 @@
 /* Light mode: override to black */
 body[data-theme="light"] .fa-linkedin,
 body[data-theme="light"] .fa-envelope,
+body[data-theme="light"] .fa-facebook,
+body[data-theme="light"] .fa-instagram, 
 body[data-theme="light"] .fa-github {
     color: black;
 }
@@ -575,25 +579,13 @@ h2 {
         [data-theme="light"] footer {
             border-top: 1px solid rgba(0, 0, 0, 0.1);
         }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
+        .icon a {
+            font-size: 30px; /* Adjust the size as needed */
+            margin: 1px;   
         }
 
-        .social-link {
-            color: var(--text-secondary);
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
 
-        .social-link:hover {
-            color: var(--primary);
-            transform: translateY(-3px);
-        }
+        
 
         /* Floating particles */
         .particle {

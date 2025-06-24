@@ -49,19 +49,51 @@
     </section>
 
 
-    <!-- About Section -->
+    <!-- Education Section -->
     <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-image">👨‍💻</div>
-            <div class="about-text">
-                <p>I'm a passionate software engineer specializing in backend development and database architecture. With over 5 years of experience, I've built and maintained high-performance systems that serve millions of users.</p>
-                <br>
-                <p>My expertise lies in designing scalable microservices, optimizing database performance, and creating robust APIs. I believe in writing clean, maintainable code and following best practices to deliver solutions that stand the test of time.</p>
-                <br>
-                <p>When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, or mentoring junior developers. I'm always excited to tackle complex challenges and learn something new.</p>
+        <h2 class="section-title">Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="degree">Master of Science in Computer Science</div>
+                    <div class="institution">Stanford University</div>
+                    <div class="year">2022 - 2024</div>
+                    <div class="description">
+                        Specialized in Machine Learning and Artificial Intelligence. Completed advanced coursework in neural networks, deep learning, and computer vision. Thesis focused on natural language processing applications.
+                    </div>
+                    <div class="skills">
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Research</span>
+                    </div>
+                </div>
             </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="degree">Bachelor of Science in Software Engineering</div>
+                    <div class="institution">University of California, Berkeley</div>
+                    <div class="year">2018 - 2022</div>
+                    <div class="description">
+                        Graduated Magna Cum Laude with a focus on full-stack development and software architecture. Active member of the Computer Science Society and participated in multiple hackathons.
+                    </div>
+                    <div class="skills">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Database Design</span>
+                        <span class="skill-tag">Agile</span>
+                    </div>
+                </div>
+            </div>
+
+            
         </div>
+    
     </section>
 
     <!-- Skills Section -->
@@ -205,6 +237,7 @@
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
         </div>
+    </div>
     </section>
 
     <!-- Footer -->
@@ -396,6 +429,25 @@
   document.addEventListener("DOMContentLoaded", () => {
     setTimeout(type, newPhraseDelay);
   });
+
+  // Intersection Observer for timeline animations
+        const observerOptions2 = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer2 = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all timeline items
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            observer.observe(item);
+        });
 </script>
 </body>
 </html>

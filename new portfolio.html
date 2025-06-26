@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="bganimation">
+        <div class="bganimation">
 
     <!-- Navigation -->
     <nav id="navbar">
@@ -85,20 +86,79 @@
     <!-- Skills Section -->
     <section id="skills">
         <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                
-            </div>
-            <div class="skill-category">
-                
-            </div>
-            <div class="skill-category">
-                
-            </div>
-            <div class="skill-category">
-                
-            </div>
-        </div>
+        <div class="slider-container">
+    <button class="nav left">&#10094;</button>
+
+    <div class="slider" id="card-slider">
+      <div class="card">
+        <img src="https://cdn.iconscout.com/icon/free/png-512/free-html-5-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175208.png?f=webp&w=512" alt="Image 1">
+        <div class="card-title">HTML</div>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/?size=100&id=21278&format=png&color=000000" alt="Image 2">
+        <div class="card-title">CSS</div>
+      </div>
+      <div class="card">
+        <img src="https://vectorified.com/image/javascript-logo-vector-17.png" alt="Image 3">
+        <div class="card-title">Javascript</div>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/?size=100&id=GPfHz0SM85FX&format=png&color=000000" alt="Image 4">
+        <div class="card-title">Java</div>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/?size=100&id=Rc0Xn5AtE8kX&format=png&color=000000" alt="Image 5">
+        <div class="card-title">Python</div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="Image 6">
+        <div class="card-title">php</div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Image 6">
+        <div class="card-title">React</div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Image 6">
+        <div class="card-title">Node.js</div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg" alt="Image 6">
+        <div class="card-title">Angular</div>
+      </div>
+      <div class="card">
+        <img src="https://logowik.com/content/uploads/images/mysql8604.logowik.com.webp" alt="Image 6">
+        <div class="card-title">MySQL</div>
+      </div>
+      <div class="card">
+        <img src="https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_git-1024.png" alt="Image 6">
+        <div class="card-title">Git</div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="Image 6">
+        <div class="card-title">github</div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="Image 6">
+        <div class="card-title">VS Code</div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/IntelliJ_IDEA_Icon.svg" alt="Image 6">
+        <div class="card-title">IntelliJ IDEA</div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Image 6">
+        <div class="card-title">Figma</div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Image 6">
+        <div class="card-title">Photoshop</div>
+      </div>
+    </div>
+
+    <button class="nav right">&#10095;</button>
+  </div>
+
     </section>
 
     <!-- Projects Section -->
@@ -211,7 +271,7 @@
             © 2025 Thisen Nambukara
         </p>
     </footer>
-    </div>
+    </div></div>
     
     <script>
         // In-memory theme storage (replaces localStorage)
@@ -407,5 +467,29 @@
             observer.observe(item);
         });
 </script>
+
+<script>
+    const slider = document.getElementById("card-slider");
+    const leftBtn = document.querySelector(".left");
+    const rightBtn = document.querySelector(".right");
+
+    // Manual scroll buttons
+    leftBtn.addEventListener("click", () => {
+      slider.scrollBy({ left: -300, behavior: "smooth" });
+    });
+
+    rightBtn.addEventListener("click", () => {
+      slider.scrollBy({ left: 300, behavior: "smooth" });
+    });
+
+    // Auto scroll
+    setInterval(() => {
+      if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+        slider.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        slider.scrollBy({ left: 300, behavior: "smooth" });
+      }
+    }, 3000); // Change every 3 seconds
+  </script>
 </body>
 </html>

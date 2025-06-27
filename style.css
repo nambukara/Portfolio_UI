@@ -435,6 +435,9 @@ h2 {
         
 
         /* Projects Section */
+        .project {
+            position: relative;
+        }
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));

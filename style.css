@@ -251,6 +251,7 @@
 .fa-github,
 .fa-facebook,
 .fa-instagram,
+.fa-youtube,
 .fa-envelope {
     background: none;
     color: white;
@@ -261,12 +262,13 @@ body[data-theme="light"] .fa-linkedin,
 body[data-theme="light"] .fa-envelope,
 body[data-theme="light"] .fa-facebook,
 body[data-theme="light"] .fa-instagram, 
+body[data-theme="light"] .fa-youtube,
 body[data-theme="light"] .fa-github {
     color: black;
 }
 
 h2 {
-  color: #8bf;
+  color: rgb(36, 200, 241);
   text-align: center;
   font-family: Lato, sans-serif;
   font-weight: 700;

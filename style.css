@@ -165,6 +165,59 @@
             width: 100%;
         }
 
+        /* Hamburger styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1100;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+[data-theme="light"] .hamburger span {
+    background: black;
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 5%;
+        background: rgba(10, 10, 15, 0.95);
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        display: none;
+    }
+
+    [data-theme="light"] .nav-links {
+        background: rgba(255, 255, 255, 0.95);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+}
+
+
         /* Hero Section */
         .hero {
             height: 100vh;

@@ -703,10 +703,6 @@ h2 {
                 gap: 1rem;
             }
             
-            .nav-links a {
-                display: none;
-            }
-            
             .theme-toggle {
                 display: flex;
             }

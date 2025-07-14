@@ -324,8 +324,9 @@ h2 {
   text-align: right;
   font-family: Lato, sans-serif;
   font-weight: 500;
-  margin: 1rem 0 1rem 2rem;
-  white-space: nowrap; /* Prevent line break */
+  font-size: 20px;
+  margin: 0.5rem 0 0.5rem 1rem;
+  
   display: flex;        /* Align span properly */
   align-items: right;  /* Vertically center the span */
   gap: 0.4rem;          /* Space between static and dynamic text */

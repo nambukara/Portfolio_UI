@@ -323,11 +323,11 @@ h2 {
   color: rgb(36, 200, 241);
   text-align: right;
   font-family: Lato, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   margin: 1rem 0 1rem 2rem;
   white-space: nowrap; /* Prevent line break */
   display: flex;        /* Align span properly */
-  align-items: center;  /* Vertically center the span */
+  align-items: right;  /* Vertically center the span */
   gap: 0.4rem;          /* Space between static and dynamic text */
 }
 

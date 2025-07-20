@@ -683,14 +683,45 @@ h2 {
         /* Footer */
         footer {
             background: var(--bg-card);
-            padding: 0.5rem 2%;
+            padding: 1rem 2%;
             text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 2rem;
         }
 
-        [data-theme="light"] footer {
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-        }
+        footer .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+}
+
+footer .icon a {
+    font-size: 28px;
+    margin: 0 6px;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+footer .icon a:hover {
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    footer .icon {
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+    footer .icon a {
+        font-size: 24px;
+        margin: 0 4px;
+    }
+    footer p {
+        font-size: 0.95rem;
+    }
+}
         .icon a {
             font-size: 30px; /* Adjust the size as needed */
             margin: 1px;   
@@ -1047,6 +1078,33 @@ h2 {
             color: rgba(255,255,255,0.8);
             margin-top: 0.5rem;
         }
+
+        @media (max-width: 768px) {
+    .slider-container {
+        max-width: 100%;
+        padding: 0 5px;
+    }
+    .slider {
+        gap: 10px;
+        padding: 10px 0;
+    }
+    .card {
+        width: 140px;
+        min-width: 120px;
+        max-width: 160px;
+    }
+    .card img {
+        height: 70px;
+    }
+    .card-title {
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
+    .nav {
+        font-size: 1.5rem;
+        padding: 2px 6px;
+    }
+}
 
 
 

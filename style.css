@@ -403,15 +403,15 @@ h2 {
 
         /* Responsive adjustments for about section */
 @media (max-width: 768px) {
-    .about-text {
-        text-align: center;
-    }
-
     .about-text .fa {
         display: inline-block;
         margin: 0 8px 0 0;
         font-size: 28px;
         vertical-align: middle;
+        text-align: center;
+    }
+    .about-text {
+        text-align: center;
     }
 }
 
